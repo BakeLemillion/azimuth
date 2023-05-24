@@ -3,39 +3,46 @@ import SvgColor from '../../../components/svg-color';
 
 // ----------------------------------------------------------------------
 
-const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />;
+const icon = (name) => <SvgColor src={`/assets/icons/azimuth/${name}.svg`} sx={{ width: 1, height: 1 }} />;
 
-const navConfig = [
+export const navConfig = [
   {
-    title: 'dashboard',
+    title: 'Панель управления',
     path: '/dashboard/app',
-    icon: icon('ic_analytics'),
+    icon: icon('ic_control'),
   },
   {
-    title: 'user',
+    title: 'Накладные',
     path: '/dashboard/user',
-    icon: icon('ic_user'),
+    icon: icon('ic_docs'),
   },
   {
-    title: 'product',
+    title: 'Импорт накладных',
     path: '/dashboard/products',
-    icon: icon('ic_cart'),
+    icon: icon('ic_archive'),
   },
   {
-    title: 'blog',
+    title: 'Мои отправления',
     path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    icon: icon('ic_truck'),
   },
   {
-    title: 'login',
+    title: 'Адресная книга',
     path: '/login',
-    icon: icon('ic_lock'),
-  },
-  {
-    title: 'Not found',
-    path: '/404',
-    icon: icon('ic_disabled'),
+    icon: icon('ic_address'),
   },
 ];
 
-export default navConfig;
+
+export const navConfigAdmin = [
+  {
+    title: 'Все накладные',
+    path: '/dashboard/app',
+    icon: icon('ic_invoice'),
+  },
+  {
+    title: 'Все гуппы накладных',
+    path: '/dashboard/app',
+    icon: icon('ic_doc'),
+  },
+]
